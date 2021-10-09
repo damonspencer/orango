@@ -1,0 +1,41 @@
+{
+  "name": "orango",
+  "version": "1.0.0",
+  "description": "pomodoro bot",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/damonspencer/orango.git"
+  },
+  "keywords": [
+    "pomodoro",
+    "discord"
+  ],
+  "author": "Damon Spencer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/damonspencer/orango/issues"
+  },
+  "homepage": "https://github.com/damonspencer/orango#readme",
+  "dependencies": {
+    "@discordjs/builders": "^0.6.0",
+    "@discordjs/opus": "^0.6.0",
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "@discordjs/voice": "^0.6.0",
+    "discord-api-types": "^0.23.1",
+    "discord.js": "^13.2.0",
+    "dotenv": "^10.0.0",
+    "ffmpeg-static": "^4.4.0",
+    "libsodium-wrappers": "^0.7.9",
+    "opusscript": "^0.0.8",
+    "sodium": "^3.0.2",
+    "tweetnacl": "^1.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^16.10.3",
+    "eslint": "^7.32.0"
+  }
+}
