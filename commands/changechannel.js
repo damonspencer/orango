@@ -9,6 +9,7 @@ module.exports = {
 		//.addIntegerOption(option => option.setName('longbreak').setDescription('Set the long break time (default 10 minutes)'))
 		//.addIntegerOption(option => option.setName('interval').setDescription('Set the pomodoro interval (default 4)')),
 	async execute(interaction) {
+		console.log('changing channel!');
 		//console.log([globalThis.pomtime, globalThis.shortbreaktime, globalThis.longbreaktime, globalThis.intervalcount]);
 		//if(interaction.options.getInteger('pomodoro') != null){
 		//	globalThis.pomtime = interaction.options.getInteger('pomodoro');

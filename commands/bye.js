@@ -5,6 +5,7 @@ module.exports = {
 		.setName('bye')
 		.setDescription('Stop the timer and leave'),
 	async execute(interaction) {
+		console.log('leaving!');
 		//console.log(globalThis.interval);
 		//clearInterval(globalThis.interval);
 		//console.log(globalThis.interval);
