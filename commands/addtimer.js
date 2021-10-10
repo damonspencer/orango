@@ -52,12 +52,36 @@ module.exports = {
 		//if (!message.guild) return;
         //console.log(message);
         //if (message.content === '-join') {
-		globalThis.interval = setInterval(globalThis.pomfunction, 60000);
-                interaction.reply('🍊pomodoro set !👌');
+		//globalThis.interval = setInterval(globalThis.pomfunction, 60000);
+		//console.log(globalThis.interval);
+                //interaction.reply('🍊pomodoro set !👌');
+		try{
+			console.log('connection:');
+			console.log(globalThis.connection);
+			globalThis.connection.destroy();
+			console.log(globalThis.connection);
+		} catch(error){
+			console.log('connection NOT destroyed! No previous connection?');
+                        console.log(globalThis.connection);
+                        //globalThis.connection.destroy();
+                        //console.log(globalThis.connection);
+		}
+		try{
+			console.log('interval');
+			console.log(globalThis.interval);
+			clearInterval(globalThis.interval);
+			console.log(globalThis.interval);
+		} catch(error){
+			console.log('interval NOT cleared! No previous interval?');
+			console.log(globalThis.interval);
+		}
                 const channel = interaction.member?.voice.channel;
 
                 if (channel) {
                         try {
+				globalThis.interval = setInterval(globalThis.pomfunction, 60000);
+                		console.log(globalThis.interval);
+                		interaction.reply('🍊pomodoro set !👌');
                                 globalThis.connection = await globalThis.connectToChannel(channel);
 				globalThis.connection.subscribe(globalThis.player);
                                 //connection.subscribe(player);
@@ -66,7 +90,7 @@ module.exports = {
                                 console.error(error);
                         }
                 } else {
-                        interaction.followUp('Join a voice channel then try again!');
+                        interaction.reply('Join a voice channel then try again!');
                 }
         //}
 		//setInterval(globalThis.pomfunction, 60000);
