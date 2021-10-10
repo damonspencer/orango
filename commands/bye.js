@@ -33,6 +33,8 @@ module.exports = {
 		globalThis.state = 0;
 		globalThis.minutecount = 0;
 		globalThis.pomodorocount = 1;
+		console.log('info, again');
+		console.log(globalThis.connection);
 		console.log(globalThis.interval);
 		return interaction.reply('Bye!');
 	},
